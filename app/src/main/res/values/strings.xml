@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Tik TakToe</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="how_would_u_like_to_play">How would you like to play?</string>
+    <string name="_continue">Continue</string>
+    <string name="you_lose">You Lose</string>
+    <string name="score">%d - %d</string>
+    <string name="round">Round %d</string>
+    <string name="host_game">Host Game</string>
+    <string name="join_game">Join Game</string>
+    <string name="new_game">New Game</string>
+    <string name="exit_game">Exit Game</string>
 </resources>
