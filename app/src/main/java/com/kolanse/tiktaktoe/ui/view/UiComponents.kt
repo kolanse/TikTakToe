@@ -91,11 +91,22 @@ fun ColumnScope.TitleText(text: String) {
 }
 
 @Composable
-fun RowScope.ColoredText(text: String) {
+fun RowScope.ColoredText(text: String, modifier: Modifier =  Modifier) {
     Text(
         color = lightPurple,
         style = Typography.titleSmall,
-        text = text
+        text = text,
+        modifier = modifier
+    )
+}
+
+@Composable
+fun BoldColoredText(text: String, modifier: Modifier =  Modifier) {
+    Text(
+        color = lightPurple,
+        style = Typography.bodyMedium,
+        text = text,
+        modifier = modifier
     )
 }
 

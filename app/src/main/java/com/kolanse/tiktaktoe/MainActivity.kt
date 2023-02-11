@@ -15,6 +15,7 @@ import androidx.navigation.compose.rememberNavController
 import com.kolanse.tiktaktoe.navigation.Route
 import com.kolanse.tiktaktoe.navigation.navigate
 import com.kolanse.tiktaktoe.ui.theme.TikTakToeTheme
+import com.kolanse.tiktaktoe.ui.view.GameInterfaceScreen
 import com.kolanse.tiktaktoe.ui.view.InputNameScreen
 import com.kolanse.tiktaktoe.ui.view.PlayerTypeSelection
 import com.kolanse.tiktaktoe.ui.view.ResultsScreen
@@ -55,6 +56,9 @@ fun MainApplication() {
             }
             composable(Route.PLAYER_TYPE) {
                 PlayerTypeSelection(onNavigate = navController::navigate)
+            }
+            composable(Route.GAME) {
+                GameInterfaceScreen(onNavigate = navController::navigate)
             }
             composable(Route.RESULTS) {
                 ResultsScreen(onNavigate = navController::navigate)
