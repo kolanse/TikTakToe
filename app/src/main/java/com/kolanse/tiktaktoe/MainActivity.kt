@@ -63,9 +63,6 @@ fun MainApplication() {
             composable(Route.RESULTS) {
                 ResultsScreen(onNavigate = navController::navigate)
             }
-            composable(Route.BOTTOM_SHEET) {
-                PlayerSelectionScreen(onNavigate = navController::navigate)
-            }
         }
     }
 }
