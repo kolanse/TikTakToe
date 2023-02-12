@@ -118,7 +118,9 @@ fun BottomSheet(title: String, subtitle: String, loadingText: String, onNavigate
                 style = Typography.titleLarge,
                 text = title,
                 textAlign = TextAlign.Start,
-                modifier = Modifier.clickable { onNavigate(UiEvent.Navigate(Route.GAME)) }
+                modifier = Modifier.clickable {
+                    onNavigate(UiEvent.Navigate(Route.GAME))
+                }
             )
             Switch(
                 checked = mCheckedState.value,

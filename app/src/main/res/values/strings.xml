@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tik TakToe</string>
+    <string name="app_name">TikTakToe</string>
     <string name="enter_your_name">Enter your name</string>
     <string name="how_would_u_like_to_play">How would you like to play?</string>
     <string name="_continue">Continue</string>
