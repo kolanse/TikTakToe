@@ -15,4 +15,10 @@
     <string name="pause_game">Pause Game</string>
     <string name="end_game">End Game</string>
     <string name="your_turn">Your Turn</string>
+    <string name="turn_on_hotspot">Turn on Hotspot</string>
+    <string name="turn_on_wifi">Turn on Wifi</string>
+    <string name="turn_on_hotspot_to_join">Turn on your hotspot to allow someone join your game</string>
+    <string name="turn_on_wifi_to_connect">Turn on your Wifi to connect to a game</string>
+    <string name="waiting_for_a_connection">Waiting for a connection</string>
+    <string name="searching_for_a_connection">Searching for a connection</string>
 </resources>

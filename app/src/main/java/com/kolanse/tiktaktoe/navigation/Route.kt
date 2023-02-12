@@ -5,4 +5,5 @@ object Route {
     const val INPUT_NAME = "input_name"
     const val PLAYER_TYPE = "player_type"
     const val RESULTS = "results"
+    const val BOTTOM_SHEET = "bottom_sheet"
 }

@@ -1,5 +1,6 @@
 package com.kolanse.tiktaktoe
 
+import PlayerSelectionScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -17,7 +18,6 @@ import com.kolanse.tiktaktoe.navigation.navigate
 import com.kolanse.tiktaktoe.ui.theme.TikTakToeTheme
 import com.kolanse.tiktaktoe.ui.view.GameInterfaceScreen
 import com.kolanse.tiktaktoe.ui.view.InputNameScreen
-import com.kolanse.tiktaktoe.ui.view.PlayerTypeSelection
 import com.kolanse.tiktaktoe.ui.view.ResultsScreen
 
 class MainActivity : ComponentActivity() {
@@ -55,13 +55,16 @@ fun MainApplication() {
                 InputNameScreen(onNavigate = navController::navigate)
             }
             composable(Route.PLAYER_TYPE) {
-                PlayerTypeSelection(onNavigate = navController::navigate)
+                PlayerSelectionScreen(onNavigate = navController::navigate)
             }
             composable(Route.GAME) {
                 GameInterfaceScreen(onNavigate = navController::navigate)
             }
             composable(Route.RESULTS) {
                 ResultsScreen(onNavigate = navController::navigate)
+            }
+            composable(Route.BOTTOM_SHEET) {
+                PlayerSelectionScreen(onNavigate = navController::navigate)
             }
         }
     }
