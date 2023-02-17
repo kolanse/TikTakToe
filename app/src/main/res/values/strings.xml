@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">Tik TakToe</string>
+    <string name="app_name">TikTakToe</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="how_would_u_like_to_play">How would you like to play?</string>
+    <string name="_continue">Continue</string>
+    <string name="you_lose">You Lose</string>
+    <string name="score">0 – 0</string>
+    <string name="round">Round %d</string>
+    <string name="host_game">Host Game</string>
+    <string name="join_game">Join Game</string>
+    <string name="new_game">New Game</string>
+    <string name="exit_game">Exit Game</string>
+    <string name="you">You</string>
+    <string name="opponent_name">Wandyy23</string>
+    <string name="pause_game">Pause Game</string>
+    <string name="end_game">End Game</string>
+    <string name="your_turn">Your Turn</string>
+    <string name="turn_on_hotspot">Turn on Hotspot</string>
+    <string name="turn_on_wifi">Turn on Wifi</string>
+    <string name="turn_on_hotspot_to_join">Turn on your hotspot to allow someone join your game</string>
+    <string name="turn_on_wifi_to_connect">Turn on your Wifi to connect to a game</string>
+    <string name="waiting_for_a_connection">Waiting for a connection</string>
+    <string name="searching_for_a_connection">Searching for a connection</string>
 </resources>
