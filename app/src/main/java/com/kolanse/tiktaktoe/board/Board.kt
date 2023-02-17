@@ -1,6 +1,5 @@
 package com.kolanse.tiktaktoe.board
 
-import android.util.Log
 import com.kolanse.tiktaktoe.model.BoardState
 import com.kolanse.tiktaktoe.model.TilePlay
 import com.kolanse.tiktaktoe.model.TileState
@@ -30,13 +29,16 @@ class Board {
 
 
     init {
+       initBoard()
+    }
+
+
+    private fun initBoard(){
         repeat(9) {
             tiles.add(TileState.EMPTY)
         }
         _tilesFlow.value = tiles
     }
-
-
 
     fun playTile(tilePlay: TilePlay){
 
@@ -49,6 +51,13 @@ class Board {
         }
 
     }
+
+
+    fun clearBoard(){
+        initBoard()
+        checkBoardStatus()
+    }
+
 
 
     /**
