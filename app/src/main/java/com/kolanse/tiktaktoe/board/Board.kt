@@ -20,7 +20,7 @@ class Board {
     private val _boardStatus = MutableStateFlow<BoardState>(BoardState.GAME_ON)
     val boardStatus: StateFlow<BoardState> = _boardStatus
 
-     val tiles = mutableListOf<TileState>()
+    private val tiles = mutableListOf<TileState>()
 
     private val winningConditions = listOf(
         listOf(0,1,2), listOf(3,4,5), listOf(6,7,8),
@@ -42,8 +42,9 @@ class Board {
 
         if (tilePlay.gamePlayed != TileState.EMPTY){
             if (tiles[tilePlay.boardPosition.ordinal] == TileState.EMPTY){
-                tiles.add(tilePlay.boardPosition.ordinal, TileState.O)
+                tiles.set(tilePlay.boardPosition.ordinal, tilePlay.gamePlayed)
                 _tilesFlow.value = tiles
+                checkBoardStatus()
             }
         }
 
@@ -60,12 +61,20 @@ class Board {
         val oBoardPositions = tiles.withIndex().filter { it.value == TileState.O }.map { it.index }
         val emptyBoardPositions = tiles.withIndex().filter { it.value == TileState.EMPTY }.map { it.index }
 
+        System.out.println("tiles $tiles")
+        System.out.println("x board positions $xBoardPositions")
+
+        System.out.println("o board positions $oBoardPositions")
+
+
         if (xBoardPositions.matchesWinningCombinations()){
+            System.out.println("it enters x")
             _boardStatus.value = BoardState.X_WINS
             return
         }
 
         if (oBoardPositions.matchesWinningCombinations()){
+            System.out.println("it enters o")
             _boardStatus.value = BoardState.O_WINS
             return
         }
