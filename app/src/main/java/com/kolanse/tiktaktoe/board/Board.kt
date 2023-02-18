@@ -70,14 +70,8 @@ class Board {
         val oBoardPositions = tiles.withIndex().filter { it.value == TileState.O }.map { it.index }
         val emptyBoardPositions = tiles.withIndex().filter { it.value == TileState.EMPTY }.map { it.index }
 
-        System.out.println("tiles $tiles")
-        System.out.println("x board positions $xBoardPositions")
-
-        System.out.println("o board positions $oBoardPositions")
-
 
         if (xBoardPositions.matchesWinningCombinations()){
-            System.out.println("it enters x")
             _boardStatus.value = BoardState.X_WINS
             return
         }
