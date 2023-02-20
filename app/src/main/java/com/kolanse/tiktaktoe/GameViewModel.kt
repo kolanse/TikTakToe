@@ -1,6 +1,7 @@
 package com.kolanse.tiktaktoe
 
 import androidx.lifecycle.ViewModel
+import com.kolanse.tiktaktoe.board.Board
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -16,9 +17,19 @@ import javax.inject.Inject
 class GameViewModel @Inject constructor(): ViewModel() {
 
 
+   private val board = Board()
 
 
-    fun initBoard(){
+    fun monitorBoardStatus () = board.boardStatus
 
+    fun monitorTiles () = board.tilesFlow
+
+    fun clearBoard(){
+        board.clearBoard()
     }
+
+    fun add
+
+
+
 }
